@@ -8,13 +8,16 @@ const App = () =>{
   const [photos, setPhotos] = useState<Photo[]>([])
 
   useEffect(()=>{
+    getPhotos();
+    }, [])
+    
     const getPhotos = async () => {
       setLoading(true);
       setPhotos(await Photos.getAll())
       setLoading(false);
     }
-    getPhotos();
-  }, [])
+    
+  
 
   return(
   <C.Container>
@@ -35,7 +38,8 @@ const App = () =>{
           {photos.map((item, index)=>(
             <div>{item.name}</div>
           ))}
-        </C.PhotoList>}
+        </C.PhotoList>
+      }
     </C.Area>
   </C.Container>
   )
