@@ -3,12 +3,12 @@ import { getStorage} from 'firebase/storage'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAGvur2O-PGsHy-n2gyQ0lNGAnc8ThWj2k",
-  authDomain: "gallery-react-rsaraiva.firebaseapp.com",
-  projectId: "gallery-react-rsaraiva",
-  storageBucket: "gallery-react-rsaraiva.appspot.com",
-  messagingSenderId: "515013476756",
-  appId: "1:515013476756:web:e038d0b81d2f6092210f81"
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID
 };
 
 const firebaseAPP = initializeApp(firebaseConfig);
