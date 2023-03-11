@@ -37,7 +37,7 @@ export const insert = async (file: File) =>{
         } as Photo;
 
     } else{
-        return new Error('Tipo de arquivo não permitido.')
+        return new Error('Tipo de arquivo não permitido!')
     }
 }
 
