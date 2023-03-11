@@ -40,3 +40,7 @@ export const insert = async (file: File) =>{
         return new Error('Tipo de arquivo não permitido.')
     }
 }
+
+export const deleteItem = ()=>{
+    
+}
