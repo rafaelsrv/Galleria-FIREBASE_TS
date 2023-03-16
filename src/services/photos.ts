@@ -37,7 +37,7 @@ export const insert = async (file: File) =>{
         } as Photo;
 
     } else{
-        return new Error('Tipo de arquivo ssnão skuporntado.:::')
+        return new Error('Tipo de arquivo ssnão skuporhgntado.:::')
     }
 }
 
