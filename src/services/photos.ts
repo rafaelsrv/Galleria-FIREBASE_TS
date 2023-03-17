@@ -37,7 +37,7 @@ export const insert = async (file: File) =>{
         } as Photo;
 
     } else{
-        return new Error('Tipo de arfqcxzuivo ssnbcvxbxcvãocxzrsrs skuporh6gnnjy6tado.:::')
+        return new Error('Tipo de arfqcxzuivo ssnbcvxbxtwecvãocxzrsrs skuporh6gnnjy6tado.:::')
     }
 }
 
