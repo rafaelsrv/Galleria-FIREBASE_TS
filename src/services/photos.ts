@@ -1,7 +1,7 @@
 import { Photo } from "../types/Photo";
 import {v4 as createId} from 'uuid'
 import { storage} from '../libs/firebase'
-import { ref, listAll, getDownloadURL, uploadBytes} from 'firebase/storage'
+import { ref, listAll, getDownloadURL, uploadBytes, deleteObject, getStorage} from 'firebase/storage'
 
 
 export const getAll = async () => {
@@ -37,10 +37,23 @@ export const insert = async (file: File) =>{
         } as Photo;
 
     } else{
-        return new Error('Tipo de arfqcxzuiv2o ssnbchfçgvlxvbjxçtgw~lecvãocxzrsrs skuporh6gnnjy6tado.:::')
+        return new Error('Tipo de arquivo')
     }
 }
 
+
 export const deleteItem = ()=>{
+
+    const storage = getStorage();
+    const desertRef = ref(storage, 'images/f4c08cb8-9d53-4470-a0f3-e22fbca33dff');
+
+    // Delete the file
+deleteObject(desertRef).then(() => {
+    'File deleted successfully'
+  }).catch((error) => {
+    'Uh-oh, an error occurred!'
+  });
+  console.log('teste')
+
     
 }

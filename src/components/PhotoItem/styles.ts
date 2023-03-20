@@ -12,3 +12,9 @@ export const Container = styled.div`
         border-radius: 10px;
     }
 `
+export const Delete = styled.div`
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    box-size: border-box;
+`
