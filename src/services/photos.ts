@@ -42,18 +42,22 @@ export const insert = async (file: File) =>{
 }
 
 
-export const deleteItem = ()=>{
+
+
+export const deleteItem = async (refname : string)=>{
 
     const storage = getStorage();
-    const desertRef = ref(storage, 'images/f4c08cb8-9d53-4470-a0f3-e22fbca33dff');
+    const desertRef = ref(storage, `images/${refname}`);
+    console.log(refname)
 
     // Delete the file
-deleteObject(desertRef).then(() => {
+await deleteObject(desertRef).then(() => {
     'File deleted successfully'
   }).catch((error) => {
     'Uh-oh, an error occurred!'
   });
-  console.log('teste')
+  
+ 
 
     
 }
